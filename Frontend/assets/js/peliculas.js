@@ -48,3 +48,17 @@ document.getElementById('filtro-anio').addEventListener('change', function() {
     : peliculas;
   renderPeliculas(filtradas);
 });
+document.getElementById('filtro-orden').addEventListener('change', function() {
+  const orden = this.value;
+  let ordenadas = [...peliculas];
+
+  if (orden === "valorados") {
+    ordenadas.sort((a, b) => b.rating - a.rating);
+  } else if (orden === "alfabetico") {
+    ordenadas.sort((a, b) => a.titulo.localeCompare(b.titulo));
+  } else {
+    ordenadas.sort((a, b) => b.anio - a.anio);
+  }
+
+  renderPeliculas(ordenadas);
+});
