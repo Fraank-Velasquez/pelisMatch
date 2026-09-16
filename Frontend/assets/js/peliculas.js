@@ -41,3 +41,10 @@ document.getElementById('filtro-genero').addEventListener('change', function() {
     : peliculas;
   renderPeliculas(filtradas);
 });
+document.getElementById('filtro-anio').addEventListener('change', function() {
+  const anio = this.value;
+  const filtradas = anio
+    ? peliculas.filter(p => p.anio == anio)
+    : peliculas;
+  renderPeliculas(filtradas);
+});
