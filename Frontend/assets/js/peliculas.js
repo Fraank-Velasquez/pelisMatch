@@ -17,7 +17,7 @@ function renderPeliculas(lista) {
   }
 
   grid.innerHTML = lista.map(p => `
-    <div class="pelicula-card">
+    <div class="pelicula-card" onclick="mostrarDetalle('${p.titulo}')">
       <div class="poster">
         ${p.poster
           ? `<img src="${p.poster}" alt="${p.titulo}">`
@@ -34,6 +34,7 @@ function renderPeliculas(lista) {
 
 renderPeliculas(peliculas);
 
+// Filtra las películas según el género seleccionado
 document.getElementById('filtro-genero').addEventListener('change', function() {
   const genero = this.value;
   const filtradas = genero
@@ -41,3 +42,5 @@ document.getElementById('filtro-genero').addEventListener('change', function() {
     : peliculas;
   renderPeliculas(filtradas);
 });
+
+// Filtra las películas según
