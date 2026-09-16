@@ -17,7 +17,7 @@ function renderPeliculas(lista) {
   }
 
   grid.innerHTML = lista.map(p => `
-    <div class="pelicula-card">
+    <div class="pelicula-card" onclick="mostrarDetalle('${p.titulo}')">
       <div class="poster">
         ${p.poster
           ? `<img src="${p.poster}" alt="${p.titulo}">`
@@ -62,3 +62,7 @@ document.getElementById('filtro-orden').addEventListener('change', function() {
 
   renderPeliculas(ordenadas);
 });
+
+function mostrarDetalle(titulo) {
+  alert(`Detalle de: ${titulo}`);
+}
