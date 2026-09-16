@@ -1,0 +1,89 @@
+/* =====================================
+   SERIES
+====================================== */
+
+.section-title h2 {
+    color: white;
+    font-weight: bold;
+}
+
+.section-title p {
+    color: #aaa;
+}
+
+
+/* TARJETA */
+
+.series-card {
+    background-color: #1b1b1b;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.series-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* IMAGEN */
+
+.series-card .card-img-top {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+
+/* CONTENIDO */
+
+.series-card .card-body {
+    padding: 18px;
+}
+
+
+/* TITULO */
+
+.series-card .card-title {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+
+/* CALIFICACIÓN */
+
+.rating {
+    color: #ffc107;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+/* BOTÓN */
+
+.series-card .btn {
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 576px) {
+
+    .series-card .card-img-top {
+        height: 260px;
+    }
+
+    .series-card .card-title {
+        font-size: 15px;
+    }
+
+}
