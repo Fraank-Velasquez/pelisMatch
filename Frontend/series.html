@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PelisMatch - Series</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="header-topbar">
+            <div class="container header-topbar-inner">
+
+                <a href="index.html" class="logo">
+                    <i class="bi bi-play-fill logo-icon"></i>
+                    <span>Pelis<span class="logo-accent">Match</span></span>
+                </a>
+
+                <div class="search-box">
+                    <input
+                        type="text"
+                        id="buscarInput"
+                        placeholder="Buscar serie..."
+                    >
+
+                    <button
+                        class="btn-buscar"
+                        id="buscarBtn"
+                        aria-label="Buscar"
+                    >
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+
+                <div class="header-actions">
+
+                    <a href="#" class="btn-login">
+                        <i class="bi bi-person-fill"></i>
+                        Iniciar sesión
+                    </a>
+
+                    <button class="btn-registro">
+                        Registrarse
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- NAVEGACIÓN -->
+        <nav class="header-nav">
+
+            <div class="container nav-inner">
+
+                <a href="index.html" class="nav-link">
+                    <i class="bi bi-house-fill"></i>
+                    Inicio
+                </a>
+
+                <a href="peliculas.html" class="nav-link">
+                    <i class="bi bi-film"></i>
+                    Películas
+                </a>
+
+                <a href="series.html" class="nav-link active">
+                    <i class="bi bi-collection-play"></i>
+                    Series
+                </a>
+
+                <a href="animes.html" class="nav-link">
+                    <i class="bi bi-play-circle"></i>
+                    Animes
+                </a>
+
+                <a href="#" class="nav-link">
+                    <i class="bi bi-star-fill"></i>
+                    Favoritos
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CONTENIDO -->
+    <main class="main">
+
+        <div class="container">
+
+            <!-- TÍTULO -->
+            <section class="series-header">
+
+                <h1 class="section-title">
+                    <i class="bi bi-collection-play"></i>
+                    Series
+                </h1>
+
+                <p>
+                    Explora nuestras series y encuentra tu próxima historia favorita.
+                </p>
+
+            </section>
+
+
+            <!-- FILTROS -->
+            <section class="series-filtros">
+
+                <select id="generoSeries">
+                    <option value="">Todos los géneros</option>
+                    <option value="accion">Acción</option>
+                    <option value="comedia">Comedia</option>
+                    <option value="drama">Drama</option>
+                    <option value="terror">Terror</option>
+                    <option value="ciencia-ficcion">Ciencia ficción</option>
+                </select>
+
+
+                <select id="anioSeries">
+
+                    <option value="">Todos los años</option>
+
+                    <option value="2026">2026</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+
+                </select>
+
+
+                <select id="ordenSeries">
+
+                    <option value="popularidad">
+                        Más populares
+                    </option>
+
+                    <option value="recientes">
+                        Más recientes
+                    </option>
+
+                    <option value="valoracion">
+                        Mejor valoradas
+                    </option>
+
+                </select>
+
+            </section>
+
+
+            <!-- SERIES POPULARES -->
+            <section class="section">
+
+                <div class="section-head">
+
+                    <h2 class="section-title">
+                        <i class="bi bi-fire"></i>
+                        Series populares
+                    </h2>
+
+                </div>
+
+
+                <div class="grid-peliculas">
+
+                    <article class="pelicula-card">
+
+                        <img
+                            src="assets/img/series/serie1.jpg"
+                            alt="Nombre de la serie"
+                        >
+
+                        <div class="pelicula-info">
+
+                            <h3>Nombre de la serie</h3>
+
+                            <div class="pelicula-meta">
+                                <span>2026</span>
+                                <span>Drama</span>
+                            </div>
+
+                            <div class="rating">
+                                <i class="bi bi-star-fill"></i>
+                                8.5
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="pelicula-card">
+
+                        <img
+                            src="assets/img/series/serie2.jpg"
+                            alt="Otra serie"
+                        >
+
+                        <div class="pelicula-info">
+
+                            <h3>Otra serie</h3>
+
+                            <div class="pelicula-meta">
+                                <span>2025</span>
+                                <span>Acción</span>
+                            </div>
+
+                            <div class="rating">
+                                <i class="bi bi-star-fill"></i>
+                                8.2
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="pelicula-card">
+
+                        <img
+                            src="assets/img/series/serie3.jpg"
+                            alt="Serie de ejemplo"
+                        >
+
+                        <div class="pelicula-info">
+
+                            <h3>Serie de ejemplo</h3>
+
+                            <div class="pelicula-meta">
+                                <span>2025</span>
+                                <span>Comedia</span>
+                            </div>
+
+                            <div class="rating">
+                                <i class="bi bi-star-fill"></i>
+                                7.9
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- SERIES RECIENTES -->
+            <section class="section">
+
+                <div class="section-head">
+
+                    <h2 class="section-title">
+                        <i class="bi bi-clock"></i>
+                        Series recientemente agregadas
+                    </h2>
+
+                </div>
+
+                <div id="seriesRecientes" class="grid-peliculas">
+
+                    <!-- Las series pueden cargarse aquí con JavaScript -->
+
+                </div>
+
+            </section>
+
+
+            <!-- MEJOR VALORADAS -->
+            <section class="section">
+
+                <div class="section-head">
+
+                    <h2 class="section-title">
+                        <i class="bi bi-star-fill"></i>
+                        Mejor valoradas
+                    </h2>
+
+                </div>
+
+                <div id="seriesValoradas" class="grid-peliculas">
+
+                    <!-- Series -->
+
+                </div>
+
+            </section>
+
+
+            <!-- CARGAR MÁS -->
+            <div class="load-more">
+
+                <button class="btn-registro" id="cargarMas">
+                    Cargar más series
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 PelisMatch.
+                    Todos los derechos reservados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
