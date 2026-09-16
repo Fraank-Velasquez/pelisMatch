@@ -28,6 +28,8 @@ const inputBuscar = document.getElementById('buscarInput');
 const btnBuscar = document.getElementById('buscarBtn');
 const resultadosSection = document.getElementById('resultadosSection');
 const contenedorResultados = document.getElementById('resultados');
+const sinResultados = document.getElementById('sinResultados');
+const loaderPantalla = document.getElementById('loaderPantalla');
 
 function renderTarjeta(item) {
     return `
@@ -48,18 +50,25 @@ function buscar() {
 
     if (!termino) {
         resultadosSection.classList.add('hidden');
+        sinResultados.classList.add('hidden');
         contenedorResultados.innerHTML = '';
         return;
     }
 
-    const resultados = catalogo.filter(item =>
-        item.titulo.toLowerCase().includes(termino) ||
-        item.tipo.toLowerCase().includes(termino) ||
-        item.genero.toLowerCase().includes(termino)
-    );
+    resultadosSection.classList.remove('hidden');
+    sinResultados.classList.add('hidden');
+    contenedorResultados.innerHTML = '<div class="spinner"></div>';
 
-    contenedorResultados.innerHTML = resultados.map(renderTarjeta).join('');
-    resultadosSection.classList.toggle('hidden', resultados.length === 0);
+    setTimeout(() => {
+        const resultados = catalogo.filter(item =>
+            item.titulo.toLowerCase().includes(termino) ||
+            item.tipo.toLowerCase().includes(termino) ||
+            item.genero.toLowerCase().includes(termino)
+        );
+
+        contenedorResultados.innerHTML = resultados.map(renderTarjeta).join('');
+        sinResultados.classList.toggle('hidden', resultados.length > 0);
+    }, 400);
 }
 
 inputBuscar.addEventListener('input', buscar);
@@ -68,4 +77,10 @@ inputBuscar.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
         buscar();
     }
+});
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        loaderPantalla.classList.add('loader-oculto');
+    }, 600);
 });
