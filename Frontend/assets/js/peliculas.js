@@ -33,3 +33,11 @@ function renderPeliculas(lista) {
 }
 
 renderPeliculas(peliculas);
+
+document.getElementById('filtro-genero').addEventListener('change', function() {
+  const genero = this.value;
+  const filtradas = genero
+    ? peliculas.filter(p => p.genero === genero)
+    : peliculas;
+  renderPeliculas(filtradas);
+});
