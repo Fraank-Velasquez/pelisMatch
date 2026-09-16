@@ -14,6 +14,11 @@
 
 <body>
 
+    <!-- Loader de carga -->
+    <div class="loader-screen" id="loaderPantalla">
+        <div class="loader-spinner"></div>
+    </div>
+
     <!-- ====== HEADER ====== -->
     <header class="header">
         <div class="header-topbar">
@@ -74,6 +79,10 @@
             <section id="resultadosSection" class="section hidden">
                 <h2 class="section-title"><i class="bi bi-search"></i> Resultados de búsqueda</h2>
                 <div id="resultados" class="grid-peliculas"></div>
+                <div id="sinResultados" class="sin-resultados hidden">
+                    <i class="bi bi-search"></i>
+                    <p>No encontramos películas, series o animes que coincidan con tu búsqueda.</p>
+                </div>
             </section>
 
             <!-- Películas populares -->
