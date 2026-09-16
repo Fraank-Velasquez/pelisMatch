@@ -590,6 +590,88 @@ ul {
     font-size: 0.82rem;
 }
 
+/* ====== MICRO-INTERACCIONES ====== */
+.logo {
+    transition: transform 0.2s;
+}
+
+.logo:hover {
+    transform: scale(1.04);
+}
+
+.nav-link {
+    transition: color 0.2s, background 0.2s;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.btn-buscar,
+.btn-registro,
+.favorito-btn,
+.btn-ver,
+.btn-detalle {
+    transition: transform 0.15s, background 0.2s, color 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.btn-ver:hover {
+    box-shadow: 0 8px 20px rgba(229, 9, 20, 0.4);
+}
+
+.btn-detalle:hover {
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.12);
+}
+
+.btn-ver:active,
+.btn-detalle:active,
+.btn-buscar:active,
+.btn-registro:active,
+.favorito-btn:active {
+    transform: scale(0.95);
+}
+
+.btn-ver i,
+.btn-detalle i {
+    transition: transform 0.2s;
+}
+
+.btn-ver:hover i,
+.btn-detalle:hover i {
+    transform: translateX(3px);
+}
+
+.see-all i {
+    transition: transform 0.2s;
+}
+
+.see-all:hover i {
+    transform: translateX(4px);
+}
+
+.poster-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(229, 9, 20, 0) 0%, rgba(12, 12, 15, 0.75) 100%);
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.tarjeta-pelicula:hover .poster-wrap::after {
+    opacity: 1;
+}
+
+.rating {
+    transition: transform 0.25s, background 0.25s, color 0.25s;
+}
+
+.tarjeta-pelicula:hover .rating {
+    transform: scale(1.08);
+    background: var(--accent);
+    color: #fff;
+}
+
 /* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
     .header-topbar-inner {
