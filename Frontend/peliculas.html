@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Películas - PelisMatch</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/peliculas.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+   
+    <header class="header">
+        <div class="header-topbar">
+            <div class="container header-topbar-inner">
+                <a href="index.html" class="logo">
+                    <i class="bi bi-play-fill logo-icon"></i>
+                    <span>Pelis<span class="logo-accent">Match</span></span>
+                </a>
+
+                <div class="search-box">
+                    <input type="text" id="buscarInput" placeholder="Buscar película, serie o anime...">
+                    <button class="btn-buscar" id="buscarBtn" aria-label="Buscar">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+
+                <div class="header-actions">
+                    <a href="#" class="btn-login"><i class="bi bi-person-fill"></i> Iniciar sesión</a>
+                    <button class="btn-registro" id="favoritosBtn">Registrarse</button>
+                </div>
+            </div>
+        </div>
+        <nav class="header-nav">
+            <div class="container nav-inner">
+                <a href="index.html" class="nav-link"><i class="bi bi-house-fill"></i> Inicio</a>
+                <a href="peliculas.html" class="nav-link active"><i class="bi bi-film"></i> Películas</a>
+                <a href="#" class="nav-link"><i class="bi bi-collection-play"></i> Series</a>
+                <a href="#" class="nav-link"><i class="bi bi-play-circle"></i> Animes</a>
+                <a href="#" class="nav-link"><i class="bi bi-star-fill"></i> Favoritos</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ====== BODY ====== -->
+    <main class="main">
+        <div class="container">
+
+            <!-- Breadcrumb -->
+            <p class="breadcrumb">
+                <a href="index.html">Inicio</a><span class="breadcrumb-sep">›</span>Películas
+            </p>
+
+            <!-- Encabezado de la página -->
+            <section class="section peliculas-header">
+                <h1 class="page-title"><i class="bi bi-film"></i> Películas</h1>
+                <p class="page-count"><strong id="total-count">0</strong> títulos disponibles</p>
+
+                <div class="filters">
+                    <select id="filtro-genero">
+                        <option value="">Género</option>
+                        <option value="accion">Acción</option>
+                        <option value="comedia">Comedia</option>
+                        <option value="drama">Drama</option>
+                        <option value="terror">Terror</option>
+                    </select>
+                    <select id="filtro-anio">
+                        <option value="">Año</option>
+                        <option value="2026">2026</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                    </select>
+                    <select id="filtro-orden">
+                        <option value="recientes">Más recientes</option>
+                        <option value="valorados">Mejor valorados</option>
+                        <option value="alfabetico">A - Z</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Grid de películas -->
+            <section class="section">
+                <div id="grid-peliculas" class="grid-peliculas">
+                
+                    <div class="empty-state">
+                        <strong>Aún no hay películas cargadas</strong>
+                        Este módulo está listo para conectarse a los datos reales cuando estén disponibles.
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo footer-logo">
+                        <i class="bi bi-play-fill logo-icon"></i>
+                        <span>Pelis<span class="logo-accent">Match</span></span>
+                    </a>
+                    <p class="footer-text">PelisMatch es tu mejor opción para ver películas, series y animes en línea
+                        con la mejor calidad.</p>
+                    <div class="social">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Explorar</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="peliculas.html">Películas</a></li>
+                        <li><a href="#">Series</a></li>
+                        <li><a href="#">Animes</a></li>
+                        <li><a href="#">Favoritos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces legales</h4>
+                    <ul>
+                        <li><a href="#">Términos de uso</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Aviso legal</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Solicitar una película</a></li>
+                        <li><a href="#">Reportar un error</a></li>
+                        <li><a href="#">DMCA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PelisMatch. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
