@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PelisMatch - Series</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Nuestro CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/serieS.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+         BARRA DE NAVEGACIÓN
+    ====================================== -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <!-- LOGO -->
+                <a href="#" class="logo">
+                    <i class="bi bi-play-fill logo-icon"></i>
+                    <span>Pelis<span class="logo-accent">Match</span></span>
+                </a>
+
+                <div class="search-box">
+                    <input type="text" id="buscarInput" placeholder="Buscar una serie..." autocomplete="off">
+
+                    <button class="btn-buscar" id="buscarBtn" type="button">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- BOTÓN PARA CELULAR -->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <!-- MENÚ -->
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house-fill"></i>
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="peliculas.html">
+                            <i class="bi bi-film"></i>
+                            Películas
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="series.html">
+                            <i class="bi bi-collection-play"></i>
+                            Series
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="animes.html">
+                            <i class="bi bi-play-circle"></i>
+                            Animes
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-star-fill"></i>
+                            Favoritos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================
+         CONTENIDO PRINCIPAL
+    ====================================== -->
+
+    <main>
+        <!-- =====================================
+             CONTENIDO DE SERIES
+        ====================================== -->
+
+        <section id="series" class="container py-5">
+
+
+            <!-- TÍTULO -->
+
+            <div class="text-center mb-4">
+
+                <h2 class="fw-bold">
+                    <i class="bi bi-fire text-danger"></i>
+                    Series populares
+                </h2>
+
+                <p class="text-muted">
+                    Las series más populares de PelisMatch
+                </p>
+
+            </div>
+
+
+
+            <!-- BOTONES DE GÉNERO -->
+
+            <div class="text-center mb-5">
+                <button class="btn btn-danger m-1">
+                    Todas
+                </button>
+                <button class="btn btn-outline-danger m-1">
+                    Acción
+                </button>
+                <button class="btn btn-outline-danger m-1">
+                    Drama
+                </button>
+                <button class="btn btn-outline-danger m-1">
+                    Comedia
+                </button>
+                <button class="btn btn-outline-danger m-1">
+                    Terror
+                </button>
+                <button class="btn btn-outline-danger m-1">
+                    Ciencia ficción
+                </button>
+            </div>
+
+
+
+            <!-- =====================================
+                 TARJETAS
+            ====================================== -->
+
+            <div class="row g-4">
+                <!-- SERIE 1 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card series-card h-100">
+
+                        <img src="https://i.pinimg.com/736x/ae/97/9b/ae979bf54732da84ea9b28263bbf0317.jpg"
+                            class="card-img-top" alt="Stranger Things">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Stranger Things</h5>
+
+                            <span class="badge bg-danger">Drama</span>
+                            <span class="badge bg-secondary">2016</span>
+
+                            <p class="rating">
+                                <i class="bi bi-star-fill"></i> 8.6
+                            </p>
+
+                            <a href="#" class="btn btn-danger w-100">
+                                <i class="bi bi-play-fill"></i>
+                                Ver serie
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- SERIE 2 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card series-card h-100">
+
+                        <img src="https://m.media-amazon.com/images/M/MV5BOWE4NTc3YmYtNmU2Mi00ZjhkLWE1MTItZmM1M2U1ODU3YjFlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpgz"
+                            class="card-img-top" alt="Breaking Bad">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Breaking Bad</h5>
+
+                            <span class="badge bg-primary">Crimen</span>
+                            <span class="badge bg-secondary">2008</span>
+
+                            <p class="rating">
+                                <i class="bi bi-star-fill"></i> 9.5
+                            </p>
+
+                            <a href="#" class="btn btn-danger w-100">
+                                <i class="bi bi-play-fill"></i>
+                                Ver serie
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- SERIE 3 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card series-card h-100">
+
+                        <img src="https://static.wikia.nocookie.net/thelastofus/images/f/fe/Portada_Parte_I_limpia.jpeg/revision/latest/thumbnail/width/360/height/360?cb=20211209015400&path-prefix=es"
+                            class="card-img-top" alt="The Last of Us">
+
+                        <div class="card-body">
+                            <h5 class="card-title">The Last of Us</h5>
+
+                            <span class="badge bg-success">Drama</span>
+                            <span class="badge bg-secondary">2023</span>
+
+                            <p class="rating">
+                                <i class="bi bi-star-fill"></i> 8.7
+                            </p>
+
+                            <a href="#" class="btn btn-danger w-100">
+                                <i class="bi bi-play-fill"></i>
+                                Ver serie
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- SERIE 4 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card series-card h-100">
+
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt-Ku8oPPSh0yVYJV9CCQ3bDlt11QsCfwLtA7-ULXIGw&s=10"
+                            class="card-img-top" alt="Wednesday">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Merlina</h5>
+
+                            <span class="badge bg-dark">Terror</span>
+                            <span class="badge bg-secondary">2022</span>
+
+                            <p class="rating">
+                                <i class="bi bi-star-fill"></i> 8.0
+                            </p>
+
+                            <a href="#" class="btn btn-danger w-100">
+                                <i class="bi bi-play-fill"></i>
+                                Ver serie
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- SERIE 5 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card series-card h-100">
+
+                        <img src="assets/img/series/the-boys.jpg" class="card-img-top" alt="The Boys">
+
+                        <div class="card-body">
+                            <h5 class="card-title">The Boys</h5>
+
+                            <span class="badge bg-warning text-dark">Acción</span>
+                            <span class="badge bg-secondary">2019</span>
+
+                            <p class="rating">
+                                <i class="bi bi-star-fill"></i> 8.6
+                            </p>
+
+                            <a href="#" class="btn btn-danger w-100">
+                                <i class="bi bi-play-fill"></i>
+                                Ver serie
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- SERIE 6 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card series-card h-100">
+
+                        <img src="assets/img/series/dark.jpg" class="card-img-top" alt="Dark">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Dark</h5>
+
+                            <span class="badge bg-info text-dark">Misterio</span>
+                            <span class="badge bg-secondary">2017</span>
+
+                            <p class="rating">
+                                <i class="bi bi-star-fill"></i> 8.7
+                            </p>
+
+                            <a href="#" class="btn btn-danger w-100">
+                                <i class="bi bi-play-fill"></i>
+                                Ver serie
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- SERIE 7 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card series-card h-100">
+
+                        <img src="assets/img/series/the-walking-dead.jpg" class="card-img-top" alt="The Walking Dead">
+
+                        <div class="card-body">
+                            <h5 class="card-title">The Walking Dead</h5>
+
+                            <span class="badge bg-danger">Terror</span>
+                            <span class="badge bg-secondary">2010</span>
+
+                            <p class="rating">
+                                <i class="bi bi-star-fill"></i> 8.1
+                            </p>
+
+                            <a href="#" class="btn btn-danger w-100">
+                                <i class="bi bi-play-fill"></i>
+                                Ver serie
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- SERIE 8 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card series-card h-100">
+
+                        <img src="assets/img/series/peaky-blinders.jpg" class="card-img-top" alt="Peaky Blinders">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Peaky Blinders</h5>
+
+                            <span class="badge bg-secondary">Drama</span>
+                            <span class="badge bg-secondary">2013</span>
+
+                            <p class="rating">
+                                <i class="bi bi-star-fill"></i> 8.7
+                            </p>
+
+                            <a href="#" class="btn btn-danger w-100">
+                                <i class="bi bi-play-fill"></i>
+                                Ver serie
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- SERIE 9 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card series-card h-100">
+
+                        <img src="assets/img/series/game-of-thrones.jpg" class="card-img-top" alt="Game of Thrones">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Game of Thrones</h5>
+
+                            <span class="badge bg-primary">Fantasía</span>
+                            <span class="badge bg-secondary">2011</span>
+
+                            <p class="rating">
+                                <i class="bi bi-star-fill"></i> 9.2
+                            </p>
+
+                            <a href="#" class="btn btn-danger w-100">
+                                <i class="bi bi-play-fill"></i>
+                                Ver serie
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- SERIE 10 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card series-card h-100">
+
+                        <img src="assets/img/series/better-call-saul.jpg" class="card-img-top" alt="Better Call Saul">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Better Call Saul</h5>
+
+                            <span class="badge bg-primary">Crimen</span>
+                            <span class="badge bg-secondary">2015</span>
+
+                            <p class="rating">
+                                <i class="bi bi-star-fill"></i> 9.0
+                            </p>
+
+                            <a href="#" class="btn btn-danger w-100">
+                                <i class="bi bi-play-fill"></i>
+                                Ver serie
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- SERIE 11 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card series-card h-100">
+
+                        <img src="assets/img/series/the-witcher.jpg" class="card-img-top" alt="The Witcher">
+
+                        <div class="card-body">
+                            <h5 class="card-title">The Witcher</h5>
+
+                            <span class="badge bg-success">Fantasía</span>
+                            <span class="badge bg-secondary">2019</span>
+
+                            <p class="rating">
+                                <i class="bi bi-star-fill"></i> 7.8
+                            </p>
+
+                            <a href="#" class="btn btn-danger w-100">
+                                <i class="bi bi-play-fill"></i>
+                                Ver serie
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- SERIE 12 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card series-card h-100">
+
+                        <img src="assets/img/series/la-casa-de-papel.jpg" class="card-img-top" alt="La Casa de Papel">
+
+                        <div class="card-body">
+                            <h5 class="card-title">La Casa de Papel</h5>
+
+                            <span class="badge bg-danger">Crimen</span>
+                            <span class="badge bg-secondary">2017</span>
+
+                            <p class="rating">
+                                <i class="bi bi-star-fill"></i> 8.2
+                            </p>
+
+                            <a href="#" class="btn btn-danger w-100">
+                                <i class="bi bi-play-fill"></i>
+                                Ver serie
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- SERIE 13 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card series-card h-100">
+
+                        <img src="assets/img/series/squid-game.jpg" class="card-img-top" alt="Squid Game">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Squid Game</h5>
+
+                            <span class="badge bg-danger">Drama</span>
+                            <span class="badge bg-secondary">2021</span>
+
+                            <p class="rating">
+                                <i class="bi bi-star-fill"></i> 7.9
+                            </p>
+
+                            <a href="#" class="btn btn-danger w-100">
+                                <i class="bi bi-play-fill"></i>
+                                Ver serie
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- SERIE 14 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card series-card h-100">
+
+                        <img src="assets/img/series/vikings.jpg" class="card-img-top" alt="Vikings">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Vikings</h5>
+
+                            <span class="badge bg-warning text-dark">Aventura</span>
+                            <span class="badge bg-secondary">2013</span>
+
+                            <p class="rating">
+                                <i class="bi bi-star-fill"></i> 8.5
+                            </p>
+
+                            <a href="#" class="btn btn-danger w-100">
+                                <i class="bi bi-play-fill"></i>
+                                Ver serie
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- SERIE 15 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card series-card h-100">
+
+                        <img src="assets/img/series/the-mandalorian.jpg" class="card-img-top" alt="The Mandalorian">
+
+                        <div class="card-body">
+                            <h5 class="card-title">The Mandalorian</h5>
+
+                            <span class="badge bg-primary">Ciencia ficción</span>
+                            <span class="badge bg-secondary">2019</span>
+
+                            <p class="rating">
+                                <i class="bi bi-star-fill"></i> 8.6
+                            </p>
+
+                            <a href="#" class="btn btn-danger w-100">
+                                <i class="bi bi-play-fill"></i>
+                                Ver serie
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- =====================================
+             SERIES RECIENTES
+        ====================================== -->
+
+        <section class="bg-light py-5">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold">
+                        <i class="bi bi-clock-history"></i>
+                        Series recientemente agregadas
+                    </h2>
+                    <p class="text-muted">
+                        Descubre las últimas series añadidas.
+                    </p>
+
+                </div>
+                <div class="text-center">
+                    <a href="#" class="btn btn-dark">
+                        Ver más series
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- =====================================
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo footer-logo">
+                        <i class="bi bi-play-fill logo-icon"></i>
+                        <span>Pelis<span class="logo-accent">Match</span></span>
+                    </a>
+                    <p class="footer-text">PelisMatch es tu mejor opción para ver películas, series y animes en línea
+                        con la mejor calidad.</p>
+                    <div class="social">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Explorar</h4>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Películas</a></li>
+                        <li><a href="#">Series</a></li>
+                        <li><a href="#">Animes</a></li>
+                        <li><a href="#">Favoritos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces legales</h4>
+                    <ul>
+                        <li><a href="#">Términos de uso</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Aviso legal</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Solicitar una película</a></li>
+                        <li><a href="#">Reportar un error</a></li>
+                        <li><a href="#">DMCA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PelisMatch. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>
